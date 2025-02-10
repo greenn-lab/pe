@@ -20,17 +20,7 @@ const config: Config = {
   organizationName: 'greenn-lab', // Usually your GitHub org/user name.
   projectName: 'pe', // Usually your repo name.
 
-  themes: ['@docusaurus/theme-search-algolia'],
-  themeConfig: {
-    algolia: {
-      appId: 'YOUR_APP_ID',
-      apiKey: 'YOUR_SEARCH_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
-      contextualSearch: true,
-      // searchPagePath: 'search',
-    }
-  },
-
+  // themes: ['@docusaurus/theme-search-algolia'],
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,7 +30,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ko',
-    locales: ['ko', 'en'],
+    locales: ['ko'],
   },
 
   presets: [
@@ -77,6 +67,13 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: 'YOUR_APP_ID',
+      apiKey: 'YOUR_SEARCH_API_KEY',
+      indexName: 'YOUR_INDEX_NAME',
+      contextualSearch: true,
+      // searchPagePath: 'search',
+    },
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
