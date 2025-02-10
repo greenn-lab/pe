@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Pear',
   tagline: 'PE Answers Repository',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://greenn-lab.github.io',
@@ -38,26 +38,13 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            id: 'answers',
+            path: 'docs/answers',
+            routeBasePath: '/',
+            sidebarPath: './sidebars.ts',
+            sidebarCollapsed: true,
+            sidebarCollapsible: true,
+            editUrl: 'https://github.com/greenn-lab/pe/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -68,79 +55,22 @@ const config: Config = {
 
   themeConfig: {
     algolia: {
-      appId: 'YOUR_APP_ID',
-      apiKey: 'YOUR_SEARCH_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
+      appId: '7IF30EL09N',
+      apiKey: '3e61706213550b96176af29587bef541',
+      indexName: 'greenn-pe-crawler',
       contextualSearch: true,
       // searchPagePath: 'search',
     },
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Pear',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+        alt: 'Wanna PE?',
+        src: 'img/logo.png',
+      }
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `(C)${new Date().getFullYear()} Green. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

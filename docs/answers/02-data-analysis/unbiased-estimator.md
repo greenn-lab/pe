@@ -1,10 +1,15 @@
 ---
-slug: long-blog-post
-title: Long Blog Post
-authors: green
-tags: [hello, docusaurus]
+author: green
+description: Understanding unbiased estimators in statistics
+tags: [가, 나, 다]
+categories:
+  - 가가
+  - 나나
+category: 가나다
+date: 2025-02-10
 ---
 
+# 불편 추정치 (Unbiased Estimator)
 This is the summary of a very long blog post,
 
 Use a `<!--` `truncate` `-->` comment to limit blog post size in the list view.
