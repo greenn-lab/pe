@@ -1,11 +1,12 @@
 ---
 author: green
 description: Understanding unbiased estimators in statistics
-tags: [가, 나, 다]
+tags: [가, 나, 다, test]
 categories:
   - 가가
   - 나나
 category: 가나다
+keywords: [test, 123]
 date: 2025-02-10
 ---
 
