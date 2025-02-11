@@ -5,9 +5,11 @@ import AdmonitionTypeInfo from '@theme/Admonition/Type/Info';
 import AdmonitionTypeWarning from '@theme/Admonition/Type/Warning';
 import AdmonitionTypeDanger from '@theme/Admonition/Type/Danger';
 import AdmonitionTypeCaution from '@theme/Admonition/Type/Caution';
+import AdmonitionTypeConcept from './Type/Concept';
 import type AdmonitionTypes from '@theme/Admonition/Types';
 
 const admonitionTypes: typeof AdmonitionTypes = {
+  concept: AdmonitionTypeConcept,
   note: AdmonitionTypeNote,
   tip: AdmonitionTypeTip,
   info: AdmonitionTypeInfo,
@@ -23,6 +25,7 @@ const admonitionAliases: typeof AdmonitionTypes = {
   important: (props) => <AdmonitionTypeInfo title="important" {...props} />,
   success: (props) => <AdmonitionTypeTip title="success" {...props} />,
   caution: AdmonitionTypeCaution,
+  concept: AdmonitionTypeConcept
 };
 
 export default {

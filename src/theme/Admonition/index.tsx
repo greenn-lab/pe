@@ -1,8 +1,7 @@
-import React, {type ComponentType, type ReactNode} from 'react';
+import React, {type ReactNode, type ComponentType} from 'react';
 import {processAdmonitionProps} from '@docusaurus/theme-common';
 import type {Props} from '@theme/Admonition';
 import AdmonitionTypes from '@theme/Admonition/Types';
-import AdmonitionTypeConcept from '@theme/Admonition/Type/Concept';
 
 function getAdmonitionTypeComponent(type: string): ComponentType<Props> {
   const component = AdmonitionTypes[type];
@@ -14,8 +13,6 @@ function getAdmonitionTypeComponent(type: string): ComponentType<Props> {
   );
   return AdmonitionTypes.info!;
 }
-
-AdmonitionTypes.concept = AdmonitionTypeConcept;
 
 export default function Admonition(unprocessedProps: Props): ReactNode {
   const props = processAdmonitionProps(unprocessedProps);

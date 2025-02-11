@@ -1,16 +1,20 @@
 import React, {type ReactNode} from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
-
 import type {Props} from '@theme/Admonition/Layout';
-
 import styles from './styles.module.css';
+
+type AdmonitionContainerProps = {
+  type: Props['type'];
+  className?: Props['className'];
+  children: ReactNode;
+};
 
 function AdmonitionContainer({
                                type,
                                className,
                                children,
-                             }: Pick<Props, 'type' | 'className'> & { children: ReactNode }) {
+                             }: AdmonitionContainerProps) {
   return (
       <div
           className={clsx(
@@ -42,9 +46,14 @@ function AdmonitionContent({children}: Pick<Props, 'children'>) {
 export default function AdmonitionLayout(props: Props): ReactNode {
   const {type, icon, title, children, className} = props;
   return (
-      <AdmonitionContainer type={type} className={className}>
-        {title || icon ? <AdmonitionHeading title={title} icon={icon}/> : null}
-        <AdmonitionContent>{children}</AdmonitionContent>
+      <AdmonitionContainer type={type} className={className}
+                           children={
+                             <>
+                               {title || icon ?
+                                   <AdmonitionHeading title={title} icon={icon}/> : null}
+                               <AdmonitionContent children={children}/>
+                             </>
+                           }>
       </AdmonitionContainer>
   );
 }

@@ -1,4 +1,4 @@
-import React, {type ReactNode} from 'react';
+import React, {ReactElement, type ReactNode} from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import type {Props} from '@theme/Admonition/Type/Tip';

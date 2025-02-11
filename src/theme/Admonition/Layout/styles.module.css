@@ -41,8 +41,12 @@
 
 /* Custom colors for different types */
 :global(.theme-admonition-concept) {
-  background: rgba(150, 100, 255, 0.08);
-  border-left: 4px solid rgb(150, 100, 255);
+  --ifm-alert-background-color: rgba(150, 100, 255, 0.08);
+  --ifm-alert-background-color-highlight: rgba(150, 100, 255, 0.15);
+  --ifm-alert-foreground-color: rgb(150, 100, 255);
+  --ifm-alert-border-color: rgb(150, 100, 255);
+  background: var(--ifm-alert-background-color);
+  border-left: 4px solid var(--ifm-alert-border-color);
 }
 
 :global(.theme-admonition-tip) {

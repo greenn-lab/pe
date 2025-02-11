@@ -35,7 +35,7 @@ export default function DocItemContent({children}: Props): ReactNode {
           <Heading as="h1">{syntheticTitle}</Heading>
         </header>
       )}
-      <MDXContent>{children}</MDXContent>
+      <MDXContent children={children} />
     </div>
   );
 }

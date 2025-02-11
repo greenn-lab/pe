@@ -1,6 +1,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -38,13 +40,15 @@ const config: Config = {
       'classic',
       {
         docs: {
-            id: 'answers',
-            path: 'docs/answers',
-            routeBasePath: '/',
-            sidebarPath: './sidebars.ts',
-            sidebarCollapsed: true,
-            sidebarCollapsible: true,
-            editUrl: 'https://github.com/greenn-lab/pe/tree/main/',
+          id: 'answers',
+          path: 'docs/answers',
+          routeBasePath: '/',
+          sidebarPath: './sidebars.ts',
+          sidebarCollapsed: true,
+          sidebarCollapsible: true,
+          editUrl: 'https://github.com/greenn-lab/pe/tree/main/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -52,7 +56,19 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+          'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    }
+  ],
+  markdown: {
+    mermaid: true
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     algolia: {
       appId: '7IF30EL09N',
@@ -69,8 +85,7 @@ const config: Config = {
       }
     },
     footer: {
-      style: 'dark',
-      copyright: `(C)${new Date().getFullYear()} Green. Built with Docusaurus.`,
+      copyright: `(c)${new Date().getFullYear()} Green.`,
     },
     prism: {
       theme: prismThemes.github,
