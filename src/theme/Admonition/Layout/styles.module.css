@@ -1,0 +1,71 @@
+.admonition {
+  margin-bottom: 1em;
+  border-radius: var(--ifm-global-radius);
+  border: none;
+  padding: 1.5rem;
+  box-shadow: var(--ifm-alert-shadow);
+}
+
+.admonitionHeading {
+  font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) /
+    var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+  text-transform: none;
+  letter-spacing: -0.025em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.admonitionIcon {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.admonitionIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.admonitionContent {
+  margin-left: 2rem;
+  color: var(--ifm-alert-foreground-color);
+  opacity: 0.85;
+}
+
+.admonitionContent > :last-child {
+  margin-bottom: 0;
+}
+
+/* Custom colors for different types */
+:global(.theme-admonition-concept) {
+  background: rgba(150, 100, 255, 0.08);
+  border-left: 4px solid rgb(150, 100, 255);
+}
+
+:global(.theme-admonition-tip) {
+  background: rgba(0, 200, 150, 0.08);
+  border-left: 4px solid rgb(0, 200, 150);
+}
+
+:global(.theme-admonition-note) {
+  background: rgba(50, 150, 255, 0.08);
+  border-left: 4px solid rgb(50, 150, 255);
+}
+
+:global(.theme-admonition-info) {
+  background: rgba(100, 100, 255, 0.08);
+  border-left: 4px solid rgb(100, 100, 255);
+}
+
+:global(.theme-admonition-warning) {
+  background: rgba(255, 150, 50, 0.08);
+  border-left: 4px solid rgb(255, 150, 50);
+}
+
+:global(.theme-admonition-danger) {
+  background: rgba(255, 50, 50, 0.08);
+  border-left: 4px solid rgb(255, 50, 50);
+}
