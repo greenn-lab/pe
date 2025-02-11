@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpe=self.webpackChunkpe||[]).push([[2488],{1027:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"AI","slug":"/category/ai","permalink":"/pe/category/ai","sidebar":"answersSidebar","navigation":{"previous":{"title":"index","permalink":"/pe/"},"next":{"title":"\ud37c\uc149\ud2b8\ub860","permalink":"/pe/ai/perceptron"}}}}')}}]);
